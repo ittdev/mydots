@@ -9,8 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/alex/.oh-my-zsh"
-export VAULT_ADDR=https://pass.latera.ru
+export ZSH="/home/aglukhov/.oh-my-zsh"
 
 
 #export LANG=ru_RU.UTF-8
@@ -112,20 +111,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias vpn-stop="openvpn3 session-manage -D --config ~/private/aglukhov/latera-tcp.ovpn"
-alias vpn-start="openvpn3 session-start --config ~/private/aglukhov/latera-tcp.ovpn"
-alias sshl="ssh -i ~/private/id_rsa_latera -l aglukhov -L 8161:localhost:8161 -F ~/.ssh/config-latera"
-alias scpl="scp -i ~/private/id_rsa_latera -F ~/.ssh/config-latera"
-alias copy_ssh_conf="> $ scpl /home/alex/Dropbox/Share/admin-data/config  aglukhov@shoigu.latera.ru:~"
-alias copy_tns_conf="> $ scpl /home/alex/Dropbox/Share/admin-data/tnsnames.ora  aglukhov@shoigu.latera.ru:~"
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-alias ssh-fix="sed -i -e '1 s/^/PubkeyAcceptedKeyTypes ssh-dss,ssh-rsa\n/;' ~/.ssh/config-latera"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
